@@ -2,7 +2,7 @@ public class TotalMoneyRequired {
     private double wealthGoal; //inflation counted
     private Profile profile1;
     private Profile profile2;
-    private double inflationRate = 0.04;
+    private static double inflationRate = 0.04;
 
     public TotalMoneyRequired(Profile profile1, Profile profile2) {
         this.profile1 = profile1;
@@ -10,7 +10,7 @@ public class TotalMoneyRequired {
         wealthGoal = genWealthGoal();
     }
 
-    public double genWealthGoalForOne(Profile profile){
+    public static double genWealthGoalForOne(Profile profile){
         double retirementYears = profile.calRetirementYears();
         double yearlyExpenses = profile.getCurrentLivingExpense();
         double yearsToRetirement = profile.getRetireAge() - profile.getCurrentAge();
